@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="Labo_Netflim.BLL/Labo_Netflim.BLL.csproj" Id="be07d935-cc8b-4cc6-b124-b3fb34a524d9" />
+  <Project Path="Labo_Netflim.DAL/Labo_Netflim.DAL.csproj" Id="5b0b720b-3005-4290-93d2-f189667561a9" />
+  <Project Path="Labo_Netflim.UnitTest/Labo_Netflim.UnitTest.csproj" Id="d301a0b8-887c-408b-a968-062b1d2347b0" />
+  <Project Path="Labo_Netflim/Labo_Netflim.csproj" />
+</Solution>
