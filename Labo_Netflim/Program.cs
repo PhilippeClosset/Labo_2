@@ -1,4 +1,8 @@
+using Labo_Netflim.BLL.Interfaces;
+using Labo_Netflim.BLL.Services;
 using Labo_Netflim.DAL;
+using Labo_Netflim.DAL.Interfaces;
+using Labo_Netflim.DAL.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,6 +14,10 @@ builder.Services.AddDbContext<NetflimDbContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("Default"));
 });
+
+builder.Services.AddScoped<IFilmRepository, FilmRepository>();
+builder.Services.AddScoped<IFilmService, FilmService>();
+
 
 
 var app = builder.Build();
