@@ -8,5 +8,7 @@ namespace Labo_Netflim.DAL.Entities
     {
         public int GenreId { get; set; }
         public required string Nom { get; set; }
+        public ICollection<GenreFilmEntity> Films { get; set; } = [];
+
     }
 }

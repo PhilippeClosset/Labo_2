@@ -9,6 +9,9 @@ namespace Labo_Netflim.DAL.Entities
         public int PersonneId { get; set; }
         public required string Nom { get; set; }
         public required string Prenom { get; set; }
+        public ICollection<JoueFilmEntity> Joue { get; set; } = [];
+
+        public ICollection<RealFilmEntity> Realise { get; set; } = [];
 
     }
 }

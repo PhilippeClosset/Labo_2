@@ -11,5 +11,10 @@ namespace Labo_Netflim.DAL.Entities
         public required string Titre { get; set; }
         public required string Synopsis { get; set; }
         public required DateOnly Annee { get; set; }
+        public ICollection<GenreFilmEntity> Genres { get; set; } = [];
+        public ICollection<JoueFilmEntity> Acteurs {  get; set; } = [];
+        public ICollection<RealFilmEntity> Realisateurs {  get; set; } = [];
+        public ICollection<InteractEntity> Interactions { get; set; } = [];
+
     }
 }

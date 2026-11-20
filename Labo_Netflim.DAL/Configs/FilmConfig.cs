@@ -17,6 +17,7 @@ namespace Labo_Netflim.DAL.Configs
                    .ValueGeneratedOnAdd();
 
             builder.Property(p => p.ImageUrl)
+                   .HasMaxLength(255)
                    .IsRequired();
 
             builder.Property(t => t.Titre)
