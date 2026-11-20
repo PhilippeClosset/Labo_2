@@ -22,6 +22,20 @@ namespace Labo_Netflim.DAL.Configs
                 .WithMany(p => p.Realise)
                 .HasForeignKey(rf => rf.PersonneId)
                 .OnDelete(DeleteBehavior.Cascade);
+
+            builder.HasData([
+    new RealFilmEntity { FilmId = 1, PersonneId = 1 },
+    new RealFilmEntity { FilmId = 1, PersonneId = 2 },
+    new RealFilmEntity { FilmId = 2, PersonneId = 6 },
+    new RealFilmEntity { FilmId = 3, PersonneId = 6 },
+    new RealFilmEntity { FilmId = 4, PersonneId = 14 },
+    new RealFilmEntity { FilmId = 5, PersonneId = 19 },
+    new RealFilmEntity { FilmId = 6, PersonneId = 22 },
+    new RealFilmEntity { FilmId = 7, PersonneId = 25 },
+    new RealFilmEntity { FilmId = 8, PersonneId = 27 },
+]);
+
+
         }
     }
 }

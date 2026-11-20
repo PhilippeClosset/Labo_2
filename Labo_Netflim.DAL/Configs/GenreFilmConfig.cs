@@ -22,7 +22,18 @@ namespace Labo_Netflim.DAL.Configs
                     .WithMany(g => g.Films)
                     .HasForeignKey(gf => gf.GenreId)
                     .OnDelete(DeleteBehavior.Cascade);
-                    
+
+            builder.HasData([
+    new GenreFilmEntity { FilmId = 1, GenreId = 1 }, new GenreFilmEntity { FilmId = 1, GenreId = 2 },
+    new GenreFilmEntity { FilmId = 2, GenreId = 1 }, new GenreFilmEntity { FilmId = 2, GenreId = 2 }, new GenreFilmEntity { FilmId = 2, GenreId = 4 },
+    new GenreFilmEntity { FilmId = 3, GenreId = 2 }, new GenreFilmEntity { FilmId = 3, GenreId = 3 }, new GenreFilmEntity { FilmId = 3, GenreId = 7 },
+    new GenreFilmEntity { FilmId = 4, GenreId = 8 }, new GenreFilmEntity { FilmId = 4, GenreId = 4 },
+    new GenreFilmEntity { FilmId = 5, GenreId = 5 }, new GenreFilmEntity { FilmId = 5, GenreId = 10 },
+    new GenreFilmEntity { FilmId = 6, GenreId = 6 }, new GenreFilmEntity { FilmId = 6, GenreId = 9 }, new GenreFilmEntity { FilmId = 6, GenreId = 7 },
+    new GenreFilmEntity { FilmId = 7, GenreId = 3 }, new GenreFilmEntity { FilmId = 7, GenreId = 8 },
+    new GenreFilmEntity { FilmId = 8, GenreId = 1 }, new GenreFilmEntity { FilmId = 8, GenreId = 2 }, new GenreFilmEntity { FilmId = 8, GenreId = 7 },
+]);
+
         }
     }
 }
